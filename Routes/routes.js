@@ -1,26 +1,29 @@
-const helpers = require("../Utilities/helpers");
+const version = require("../Utilities/helpers");
 
 module.exports = (app) => {
     //Hosting the station
     app.get('/program-station-version', (req, res) => {
         console.log("Serving station version");
-        helpers.version(req, res, "Station_Version");
+        version(req, res, "Station_Version");
     });
 
     app.get('/program-station', (req, res) => {
-        var file = __dirname + '/Applications/Station.zip';
+        const file = __dirname + '/Applications/Station.zip';
+        console.log("Serving station file");
         res.download(file);
     });
 
     //Hosting steamCMD
     app.get('/program-steamcmd', (req, res) => {
-        var file = __dirname + '/Applications/steamcmd.zip';
+        const file = __dirname + '/Applications/steamcmd.zip';
+        console.log("Serving steamcmd file");
         res.download(file);
     });
 
     //Hosting setvol
     app.get('/program-setvol', (req, res) => {
-        var file = __dirname + '/Applications/SetVol.zip';
+        const file = __dirname + '/Applications/SetVol.zip';
+        console.log("Serving setvol file");
         res.download(file);
     });
 };
