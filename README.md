@@ -1,7 +1,7 @@
 # LeadMeLabs---HostingServer-Station
 
 The LeadMe Labs Station Hosting Server is specifically designed to support the LeadMe Labs Station software and its 
-associated widgets, such as SteamCMD and SetVol. Please note that direct communication with this server is not intended 
+associated widgets, including SteamCMD and SetVol. Please note that direct communication with this server is not intended 
 or recommended. Instead, it is advisable to make a URL call to the main Redirect server, which will efficiently redirect 
 the request to the hosting server.
 
